@@ -1,0 +1,97 @@
+
+  253  kubectl api-resources
+  254  clear
+  255  kubectl
+  256  kubectl top
+  257  kubectl top pod
+  258  clear
+  259  kubectl get nodes
+  260  kubectl get nodes -o wide
+  261  kubectl describe node ip-172-20-68-170.ec2.internal
+  262  clear
+  263  kops create cluster --help
+  264  clear
+  265  kops get ig
+  266  ls
+  267  ls -ltr
+  268  cd trantor/
+  269  ls
+  270  clear
+  271  cd ..
+  272  ls
+  273  cd .ssh/
+  274  ls
+  275  cd ..
+  276  cd ~./ssh
+  277  cd ~.ssh
+  278  cd ~
+  279  ls
+  280  cd .ssh/
+  281  ls
+  282  kubectl get nodes
+  283  ssh -i id_rsa.pub ip-172-20-68-170.ec2.internal
+  284  clear
+  285  kubectl get nodes
+  286  kops edit ig nodes
+  287  clear
+  288  kops update cluster --yes
+  289  kubectl get pods -w
+  290  clear
+  291  kuebctl get rs -w
+  292  kubectl get rs -w
+  293  kubectl get pods -w
+  294  kubectl get pods
+  295  clear
+  296  ls
+  297  cd yamls/
+  298  ls
+  299  vi mydeploy
+  300  vi mydeploy.yaml
+  301  cd ../trantor/
+  302  ls
+  303  cd volumes/
+  304  ls
+  305  vi redis.yaml
+  306  clear
+  307  kubectl get deploy
+  308  kubectl get pods
+  309  kubectl scale deploy myapache --replicas=0
+  310  kubectl get pods
+  311  clear
+  312  kubectl create -f redis.yaml
+  313  kubectl get pods
+  314  kubectl exec -it redis bash
+  315  kubectl get nodes
+  316  clear
+  317  vi hostpath-volume.yaml
+  318  kubectl create -f hostpath-volume.yaml
+  319  kubectl gt pods
+  320  kubectl get pods
+  321  kubectl get pods -o wide
+  322  clear
+  323  kubectl get pods -o wide
+  324  kubectl delete  -f hostpath-volume.yaml
+  325  kubectl delete pod redis
+  326  kubectl create -f hostpath-volume.yaml
+  327  kubectl get pods -o wide
+  328  clear
+  329  kubectl delete -f hostpath-volume.yaml
+  330  kubectl get pods
+  331  kubectl exec -it demo1 -- bash
+  332  clear
+  333  ls
+  334  kubectl delete -f aws-volume.yaml
+  335  clear
+  336  vi demo-pv.yaml
+  337  kubectl create -f demo-pv.yaml
+  338  kubectl get pv
+  339  vi demo-pvc.yaml
+  340  kubectl create -f demo-pvc.yaml
+  341  kubectl get pvc
+  342  kubectl get pv
+  343  vi demo-pv-pvc.yaml
+  344  kubectl create -f demo-pv-pvc.yaml
+  345  kubectl get pods
+  346  kubectl describe pod demo
+  347  kubectl get pods -o wide
+  348  history
