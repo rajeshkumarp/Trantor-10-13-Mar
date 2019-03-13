@@ -95,3 +95,4 @@
   346  kubectl describe pod demo
   347  kubectl get pods -o wide
   348  history
+  349  aws ec2 create-volume --region us-east-1 --availability-zone us-east-1b --size 2 --volume-type gp2 --tag-specifications 'ResourceType=volume,Tags=[{Key=KubernetesCluster,Value=lab.k8s.local}]'
