@@ -1,0 +1,22 @@
+apt install openssl
+# to generate a private key for the user1 - end user action
+openssl genrsa -out user1.key 2048
+
+#then we need to generate a csr with the help of the private key generated in the above step  - end user action
+openssl req -new -key user1.key -out user1.csr -subj "/CN=user1/O=devs/"
+
+#Enduser should pass his csr to the kube administrator, and administrator should ensure that he has the ca.crt and ca.key files downloaded from s3 to issue new certificate to enduser
+
+openssl x509 -req -in user1.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out user1.crt -days 1000
+
+#Once the certifcate for the enduser is generated, it can be passed back to the enduser to make use along with his private key
+#belwo command is just to view the info of the certificate just generated
+openssl x509 -in "user1.crt" -text -noout
+
+kubectl config get-clusters
+
+kubectl config set-credentials user1 --client-certificate="/home/ubuntu/rbac/user1.crt" --client-key="/home/ubuntu/rbac/user1.key" --embed-certs=true
+
+kubectl config set-context user1 --cluster=lab.k8s.local --user=user1
+
+kubectl config use-context user1
